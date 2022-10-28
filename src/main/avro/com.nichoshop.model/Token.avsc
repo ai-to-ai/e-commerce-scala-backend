@@ -1,0 +1,27 @@
+{
+  "namespace": "com.nichoshop.model.dto",
+  "type": "record",
+  "name": "TokenDto",
+  "fields": [
+    {
+      "name": "hash",
+      "type": "string"
+    },
+    {
+      "name": "hashSession",
+      "type": "string"
+    },
+    {
+      "name": "userid",
+      "type": "string"
+    },
+    {
+      "name": "timestamp",
+      "type": "long"
+    },
+    {
+      "name": "created",
+      "type": "long"
+    }
+  ]
+}

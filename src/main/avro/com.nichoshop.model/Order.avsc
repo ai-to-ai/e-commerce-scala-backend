@@ -1,0 +1,224 @@
+[
+    {
+        "namespace": "com.nichoshop.model.dto",
+        "type": "record",
+        "name": "TransactionDto",
+        "fields": [
+            {
+                "name": "id",
+                "type": ["null", "int"],
+                "default": null
+            },
+            {
+                "name": "status",
+                "type": "int"
+            },
+            {
+                "name": "money",
+                "type": "RichMoneyDto"
+            },
+            {
+                "name": "created",
+                "type": "long"
+            }
+        ]
+    },
+    {
+        "namespace": "com.nichoshop.model.dto",
+        "type": "record",
+        "name": "OrderItemDto",
+        "fields": [
+            {
+                "name": "id",
+                "type": ["null", "int"],
+                "default": null
+            },
+            {
+                "name": "title",
+                "type": "string",
+                "default": ""
+            },
+            {
+                "name": "condition",
+                "type": "Condition",
+                "default": "NEW"
+            },
+            {
+                "name": "variants",
+                "type": [
+                     "null",
+                     {
+                        "type": "array",
+                        "items": "VariantDto"
+                    }
+                ]      
+            },
+            {
+                "name": "quantity",
+                "type": "int",
+                "default": 1
+            },
+            {
+                "name": "price",
+                "type": "RichMoneyDto"
+            }
+        ]
+    },
+    {
+        "namespace": "com.nichoshop.model.dto",
+        "type": "record",
+        "name": "OrderDetailDto",
+        "fields": [
+            {
+                "name": "id",
+                "type": ["null", "int"],
+                "default": null
+            },
+            {
+                "name": "payment",
+                "type": "int"
+            },
+            {
+                "name": "status",
+                "type": "int"
+            },
+            {
+                "name": "delivery",
+                "type": "long"
+            },
+            {
+                "name": "tracking",
+                "type": "TrackingDto"
+            },
+            {
+                "name": "summary",
+                "type": "SummaryDto"
+            },
+            {
+                "name": "soldbySeller",
+                "type": "int"
+            },
+            {
+                "name": "sellerName",
+                "type": "string"
+            },
+            {
+                "name": "total",
+                "type": "RichMoneyDto"
+            },
+            {
+                "name": "orderNum",
+                "type": "string"
+            },
+            {
+                "name": "created",
+                "type": "long"
+            },
+            {
+                "name": "items",
+                "type":{
+                    "type": "array",
+                    "items": "OrderItemDto"
+                }
+            },
+            {
+                "name": "address",
+                "type": "AddressDto"
+            }
+        ]
+    },
+    {
+        "namespace": "com.nichoshop.model.dto",
+        "type": "record",
+        "name": "OrderDto",
+        "fields": [
+            {
+                "name": "id",
+                "type": ["null", "int"],
+                "default": null
+            },
+            {
+                "name": "payment",
+                "type": "int"
+            },
+            {
+                "name": "status",
+                "type": "int"
+            },
+            {
+                "name": "delivery",
+                "type": "long"
+            },
+            {
+                "name": "tracking",
+                "type": ["null", "TrackingDto"]
+            },
+            {
+                "name": "soldbySeller",
+                "type": "int"
+            },
+            {
+                "name": "total",
+                "type": "RichMoneyDto"
+            },
+            {
+                "name": "orderNum",
+                "type": "string"
+            },
+            {
+                "name": "created",
+                "type": "long"
+            },
+            {
+                "name": "sellerName",
+                "type": "string"
+            },
+            {
+                "name": "soldBySeller",
+                "type": "int"
+            },
+             {
+                "name": "items",
+                "type": {
+                    "type": "array",
+                    "items": "ItemDto"
+                }
+            }
+        ]
+    },
+    {
+        "namespace": "com.nichoshop.model.dto",
+        "type": "record",
+        "name": "SellerOrderDto",
+        "fields": [
+            {
+                "name": "id",
+                "type": ["null", "int"],
+                "default": null
+            },
+            {
+                "name": "soldDate",
+                "type": "long"
+            },
+            {
+                "name": "orderId",
+                "type": "string"
+            },
+            {
+                "name": "buyername",
+                "type": "string"
+            },
+            {
+                "name": "items",
+                "type": {
+                    "type": "array",
+                    "items": "ItemDto"
+                }
+            },
+            {
+                "name": "status",
+                "type": "int"
+            }
+        ]
+    }
+]

@@ -1,0 +1,94 @@
+[
+  {
+    "namespace": "com.nichoshop.model.dto",
+    "type": "record",
+    "name": "UserDto",
+    "fields": [
+      {
+        "name": "id",
+        "type": "int"
+      },
+      {
+        "name": "userid",
+        "type": "string"
+      },
+      {
+        "name": "email",
+        "type": "string"
+      },
+      {
+        "name": "firstName",
+        "type": "string"
+      },
+      {
+        "name": "lastName",
+        "type": "string"
+      },
+      {
+        "name": "registrationTimestamp",
+        "type": "long"
+      },
+      {
+        "name": "emailConfirmed",
+        "type": "boolean"
+      },
+      {
+        "name": "suspended",
+        "type": "boolean"
+      },
+      {
+        "name": "phoneConfirmed",
+        "type": "boolean"
+      },
+      {
+        "name": "accountType",
+        "type": "int"
+      },
+      {
+        "name": "phone",
+        "type": [
+          "null",
+          "string"
+        ],
+        "default": null
+      },     
+      {
+        "name": "roles",
+        "type": [
+          "null",
+          {
+            "type": "array",
+            "items": "Role"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "namespace": "com.nichoshop.model.dto",
+    "type": "record",
+    "name": "BusinessDto",
+    "fields": [
+      {
+        "name": "id",
+        "type": "int"
+      },
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "addressId",
+        "type": "int"
+      },
+      {
+        "name": "vatCountry",
+        "type": "string"
+      },
+      {
+        "name": "vatNumber",
+        "type": "string"
+      }
+    ]
+  }
+]

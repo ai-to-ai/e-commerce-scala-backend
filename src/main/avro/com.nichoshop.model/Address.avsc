@@ -1,0 +1,67 @@
+{
+    "namespace": "com.nichoshop.model.dto",
+    "type": "record",
+    "name": "AddressDto",
+    "fields": [
+      {
+        "name": "id",
+        "type": "int"
+      },
+      {
+        "name": "userId",
+        "type": "int"
+      },
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "addressLine1",
+        "type": "string"
+      },
+      {
+        "name": "addressLine2",
+        "type": [
+          "null",
+          "string"
+        ],
+        "default": null
+      },
+      {
+        "name": "city",
+        "type": "string"
+      },
+      {
+        "name": "state",
+        "type": [
+          "null",
+          "string"
+        ],
+        "default": null
+      },
+      {
+        "name": "zip",
+        "type": "string"
+      },
+      {
+        "name": "country",
+        "type": "string"
+      },
+      {
+        "name": "phone",
+        "type": "string"
+      },
+      {
+        "name": "addressType",
+        "type": "int"
+      },
+      {
+        "name": "status",
+        "type": "int"
+      },
+      {
+        "name": "addressIsVerified",
+        "type": "boolean"
+      }
+    ]
+  }

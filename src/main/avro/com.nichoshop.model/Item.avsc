@@ -1,0 +1,158 @@
+[
+  {
+    "namespace": "com.nichoshop.model.dto",
+    "type": "record",
+    "name": "AttributeOptionsDto",
+    "fields": [
+      {"name": "options", "type": {"type": "array", "items": "string"}}
+    ]
+  },
+  {
+    "namespace": "com.nichoshop.model.dto",
+    "type": "record",
+    "name": "AttributeDto",
+    "fields": [
+      {"name": "id", "type": "int"},
+      {"name": "categoryId", "type": "int"},
+      {"name": "name", "type": "string"},
+      {"name": "valueType", "type": "AttributeType", "default": "STRING"},
+      {"name": "valueOptions", "type": ["null", "AttributeOptionsDto"], "default": null},
+      {"name": "defaultValue", "type": ["null", "string"], "default": null},
+      {"name": "isMultivariation", "type": "boolean", "default": false}
+    ]
+  },
+  {
+    "namespace": "com.nichoshop.model.dto",
+    "type": "record",
+    "name": "VariantDto",
+    "fields": [
+      {
+        "name": "id",
+        "type": ["null", "int"],
+        "default": null
+      },
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "description",
+        "type": "string"
+      },
+      {
+        "name": "created",
+        "type": "long"
+      },
+      {
+        "name": "price",
+        "type": "RichMoneyDto"
+      },
+      {
+        "name": "amount",
+        "type": "int"
+      },
+      {
+        "name": "condition",
+        "type": "Condition",
+        "default": "NEW"
+      }
+    ]
+  },
+  {
+    "namespace": "com.nichoshop.model.dto",
+    "type": "record",
+    "name": "ItemDto",
+    "fields": [
+      {
+        "name": "id",
+        "type": ["null", "int"],
+        "default": null
+      },
+      {
+        "name": "categoryId",
+        "type": "int"
+      },
+      {
+        "name": "sellerId",
+        "type": "int"
+      },
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "description",
+        "type": "string"
+      },
+      {
+        "name": "created",
+        "type": "long"
+      },
+      {
+        "name": "variants",
+        "type": {
+          "type": "array",
+          "items": "VariantDto"
+        }
+      }
+    ]
+  },
+  {
+    "namespace": "com.nichoshop.model.dto",
+    "type": "record",
+    "name": "AuctionAttendieDto",
+    "fields": [
+      {
+        "name": "userId",
+        "type": "int"
+      },
+      {
+        "name": "maxBid",
+        "type": "RichMoneyDto"
+      },
+      {
+        "name": "timestamp",
+        "type": "long"
+      }
+    ]
+  },
+  {
+    "namespace": "com.nichoshop.model.dto",
+    "type": "record",
+    "name": "AuctionDto",
+    "fields": [
+      {
+        "name": "id",
+        "type": "int"
+      },
+      {
+        "name": "item",
+        "type": "ItemDto"
+      },
+      {
+        "name": "currentPrice",
+        "type": "RichMoneyDto"
+      },
+      {
+        "name": "winner",
+        "type": ["null", "AuctionAttendieDto"],
+        "default": null
+      },
+      {
+        "name": "startAt",
+        "type": "long"
+      },
+      {
+        "name": "finishAt",
+        "type": "long"
+      },
+      {
+        "name": "attendies",
+        "type": ["null", {
+          "type": "array",
+          "items": "AuctionAttendieDto"
+        }]
+      }
+    ]
+  }
+]

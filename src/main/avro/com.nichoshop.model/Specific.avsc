@@ -1,0 +1,42 @@
+  [{
+      "namespace": "com.nichoshop.model.dto",
+      "type": "record",
+      "name": "SpecificDto",
+      "fields": [
+          {
+            "name": "id",
+            "type": "int"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "defaultValue",
+            "type": "string"
+          },
+          {
+            "name": "required",
+            "type": "boolean"
+          }
+        ]
+  },
+  {
+    "namespace": "com.nichoshop.model.dto",
+    "type": "record",
+    "name": "SpecificArrayDto",
+    "fields": [
+      {
+        "name": "options", 
+        "type": [
+          "null",
+          {
+            "type": "array",
+            "items": "SpecificDto"
+          }
+        ],
+        "default": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,71 @@
+[
+    {
+        "namespace": "com.nichoshop.model.dto",
+        "type": "enum",
+        "name": "AttributeType",
+        "symbols": ["STRING", "INTEGER", "UNSIGNED_INTEGER0", "UNSIGNED_INTEGER1", "ENUM"]
+    },
+    {
+        "namespace": "com.nichoshop.model.dto",
+        "type": "enum",
+        "name": "Role",
+        "symbols": [
+          "USER",
+          "ADMIN",
+          "SUPPORT"
+        ]
+      },
+      {
+        "namespace": "com.nichoshop.model.dto",
+        "type": "enum",
+        "name": "AccountType",
+        "symbols": [
+          "PERSONAL",
+          "BUSINESS",
+          "SYSTEM"
+        ]
+      },
+    {
+        "namespace": "com.nichoshop.model.dto",
+        "type": "enum",
+        "name": "Condition",
+        "symbols": [
+                "NEW",
+                "USED"
+        ]
+    },
+    {
+        "namespace": "com.nichoshop.model.dto",
+        "type": "record",
+        "name": "RichMoneyDto",
+        "fields": [
+            {
+                "name": "amount",
+                "type": "int"
+            },
+            {
+                "name": "currencyId",
+                "type": "int"
+            }
+        ]
+    },
+    {
+        "namespace": "com.nichoshop.model.dto",
+        "type": "record",
+        "name": "SummaryDto",
+        "fields": [
+            {
+                "name": "subtotal",
+                "type": "RichMoneyDto"
+            },
+            {
+                "name": "shipping",
+                "type": "RichMoneyDto"
+            },
+            {
+                "name": "total",
+                "type": "RichMoneyDto"
+            }
+        ]
+    }
+]

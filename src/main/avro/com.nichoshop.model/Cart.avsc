@@ -1,0 +1,64 @@
+[
+    {
+        "namespace": "com.nichoshop.model.dto",
+        "type": "record",
+        "name": "CartItemDto",
+        "fields": [
+            {
+                "name": "item",
+                "type": "ItemDto"
+            },
+            {
+                "name": "qty",
+                "type": "int"
+            },
+            {
+                "name": "variant",
+                "type": "VariantDto"
+            },
+            {
+                "name": "user",
+                "type": "UserDto"
+            }
+        ]
+    },
+    {
+        "namespace": "com.nichoshop.model.dto",
+        "type": "record",
+        "name": "CartDto",
+        "fields": [
+            {
+                "name": "cart",
+                "type": [
+                    "null",
+                    {
+                        "type": "array",
+                        "items": "CartItemDto"
+                    }
+                ]
+            },
+            {
+                "name": "saveForLater",
+                "type": [
+                    "null",
+                    {
+                        "type": "array",
+                        "items": "CartItemDto"
+                    }
+                ]
+            },
+            {
+                "name": "summary",
+                "type": "SummaryDto"
+            },
+            {
+                "name": "variant",
+                "type": "VariantDto"
+            },
+            {
+                "name": "user",
+                "type": "UserDto"
+            }
+        ]
+    }
+]

@@ -1,0 +1,93 @@
+[
+    {
+        "namespace": "com.nichoshop.model.dto",
+        "type": "record",
+        "name": "ClaimItemDto",
+        "fields": [
+            
+                {
+                    "name": "id",
+                    "type": ["null", "int"],
+                    "default": null
+                },
+                {
+                    "name": "title",
+                    "type": "string"
+                },
+                {
+                    "name": "qty",
+                    "type": "int"
+                },
+                {
+                    "name": "total",
+                    "type": "int"
+                },
+                {
+                    "name": "delivery",
+                    "type": "long"
+                }
+            
+        ]
+    },
+    {
+        "namespace": "com.nichoshop.model.dto",
+        "type": "record",
+        "name": "ClaimOrderDto",
+        "fields": [
+            
+                {
+                    "name": "id",
+                    "type": ["null", "int"],
+                    "default": null
+                },
+                {
+                    "name": "title",
+                    "type": "string"
+                },
+                {
+                    "name": "qty",
+                    "type": "int"
+                },
+                {
+                    "name": "total",
+                    "type": "int"
+                },
+                {
+                    "name": "delivery",
+                    "type": "long"
+                }
+            
+        ]
+    },
+    {
+        "namespace": "com.nichoshop.model.dto",
+        "type": "record",
+        "name": "ClaimDto",
+        "fields": [
+            {
+                "name": "id",
+                "type": ["null", "int"],
+                "default": null
+            },
+            {
+                "name": "order",
+                "type": "OrderDto"
+            },
+            {
+                "name": "items",
+                "type": {
+                "type": "array",
+                "items": "ClaimItemDto"
+                }
+            },
+            {
+                "name": "status",
+                "type": "int"
+            },
+            {
+                "name": "created",
+                "type": "int"
+            }
+        ]
+    }
+]
